@@ -1,0 +1,38 @@
+{
+    "name": "makecode-tutorials",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "tutorials/lichtsirene.md",
+        "tutorials/heisserdraht.md",
+        "tutorials/maulwurf.md",
+        "tutorials/kipplicht.md",
+        "tutorials/klavier.md",
+        "tutorials/orakel.md",
+        "tutorials/stoppuhr.md",
+        "tutorials/countdown.md",
+        "tutorials/countdown_led.md",
+        "tutorials/wasserwaage.md",
+        "tutorials/helligkeit.md",
+        "tutorials/feuchtigkeit.md",
+        "tutorials/temperatur.md",
+        "tutorials/blinkendesherz.md",
+        "tutorials/niederschlag.md",
+        "tutorials/alarmanlage.md",
+        "tutorials/schrittzaehler.md",
+        "tutorials/laermampel.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "calliopemini"
+    ],
+    "preferredEditor": "tsprj"
+}
