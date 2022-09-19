@@ -26,7 +26,8 @@
         "tutorials/niederschlag.md",
         "tutorials/alarmanlage.md",
         "tutorials/schrittzaehler.md",
-        "tutorials/laermampel.md"
+        "tutorials/laermampel.md",
+        "tutorials/thermometer.md"
     ],
     "testFiles": [
         "test.ts"
