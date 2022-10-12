@@ -12,7 +12,7 @@ Um einen Ton auf Pin 0 abzuspielen zu können, muss der Block ``||music.spiele N
 Lege anschließend eine Note und einen Schlag, beziehungsweise die Dauer des Tons fest.
 
 ```blocks
-input.onPinPressed(TouchPin.P0, function () {
+input.onPinTouchEvent(TouchPin.P0, input.buttonEventDown(), function () {
     music.playTone(262, music.beat(BeatFraction.Quarter))
 })
 ```
@@ -24,7 +24,7 @@ Wähle dazu die Blöcke ``||basic.setze RGB-LED-Farbe auf||`` und ``||basic.zeig
 Setze RGB-LED auf eine Farbe deiner Wahl. Der Text sollte mit dem Buchstaben deiner Note übereinstimmen.
 
 ```blocks
-input.onPinPressed(TouchPin.P0, function () {
+input.onPinTouchEvent(TouchPin.P0, input.buttonEventDown(), function () {
     basic.setLedColor(0xff0000)
     basic.showString("C")
     music.playTone(262, music.beat(BeatFraction.Quarter))
@@ -38,7 +38,7 @@ Das hat den Grund, dass wir diese während und nicht nach dem Abspielen der Note
 Schalte den LED-Bildschirm und die RGB-LED mit den beiden Blöcken ``||basic.Bildschirminhalt löschen||`` ``||basic.eingebaute RGB-LED ausschalten||`` wieder aus!
 
 ```blocks
-input.onPinPressed(TouchPin.P0, function () {
+input.onPinTouchEvent(TouchPin.P0, input.buttonEventDown(), function () {
     basic.setLedColor(0xff0000)
     basic.showString("C")
     music.playTone(262, music.beat(BeatFraction.Quarter))
@@ -53,28 +53,28 @@ Fast geschafft! Jetzt wiederhole diese Schritte für die 3 weiteren Pins und än
 Kleiner Tipp: Du kannst mit Strg+C und Strg+V die Blöcke ganz einfach kopieren.
 
 ```blocks
-input.onPinPressed(TouchPin.P0, function () {
+input.onPinTouchEvent(TouchPin.P0, input.buttonEventDown(), function () {
     basic.setLedColor(0xff0000)
     basic.showString("C")
     music.playTone(262, music.beat(BeatFraction.Quarter))
     basic.turnRgbLedOff()
     basic.clearScreen()
 })
-input.onPinPressed(TouchPin.P3, function () {
+input.onPinTouchEvent(TouchPin.P3, input.buttonEventDown(), function () {
     basic.setLedColor(0x00ff00)
     basic.showString("A")
     music.playTone(440, music.beat(BeatFraction.Quarter))
     basic.turnRgbLedOff()
     basic.clearScreen()
 })
-input.onPinPressed(TouchPin.P2, function () {
+input.onPinTouchEvent(TouchPin.P2, input.buttonEventDown(), function () {
     basic.setLedColor(0xffff00)
     basic.showString("F")
     music.playTone(349, music.beat(BeatFraction.Quarter))
     basic.turnRgbLedOff()
     basic.clearScreen()
 })
-input.onPinPressed(TouchPin.P1, function () {
+input.onPinTouchEvent(TouchPin.P1, input.buttonEventDown(), function () {
     basic.setLedColor(0x0000ff)
     basic.showString("H")
     music.playTone(494, music.beat(BeatFraction.Quarter))
@@ -89,7 +89,7 @@ Super, dein Klavier ist fertig!
 Klicke auf ``|Herunterladen|``, um dein Programm auf deinen Calliope mini zu übertragen und Klavier zu spielen.
 
 ```template
-input.onPinPressed(TouchPin.P0, function () {
+input.onPinTouchEvent(TouchPin.P0, input.buttonEventDown(), function () {
 	
 })
 ```

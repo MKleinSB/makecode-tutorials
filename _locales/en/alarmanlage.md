@@ -19,7 +19,7 @@ zeigen wir uns diesen an, wenn wir Taste A drücken.
 - Lade dein Programm auf den Calliope mini herunter und lese die Werte auf der LED-Matrix. Vergesse nicht Taste A zu drücken!
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.showNumber(Helligkeit)
 })
 ```
@@ -107,7 +107,7 @@ Umgekehrt, wenn sie aus ist, an.
 - ``||variables.Setze scharfgestellt||`` auf ``falsch``, wenn sie scharfgestellt ist, ansonsten auf ``wahr``
 
 ```blocks
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (scharfgestellt) {
         scharfgestellt = false
     } else {
@@ -123,10 +123,10 @@ input.onButtonPressed(Button.B, function () {
 Fertig ist deine Alarmanlage, um dich vor Einbrechern zu schützen!
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.showNumber(input.lightLevel())
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (scharfgestellt) {
         scharfgestellt = false
     } else {

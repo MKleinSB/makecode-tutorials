@@ -15,7 +15,7 @@ die ``||led.LED||``-Blöcke. Füge ``||led.zeichne x 0 y 0 ||`` ein.
 
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     led.plot(0, 0)
 })
 ```
@@ -29,7 +29,7 @@ Klicke auf ``||loops.Schleifen||`` und wähle den Block ``||loops.für Index von
 
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
 for (let Index = 0; Index <= 4; Index++) {
     led.plot(0, 0)
 }
@@ -48,7 +48,7 @@ Um die LEDs in der Reihe x anzuschalten muss **x** der Variable ``||variables.In
 
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
 for (let Index = 0; Index <= 4; Index++) {
     led.plot(Index, 0)
 }
@@ -83,7 +83,7 @@ Beide Wege werden hier vorgestellt. Wir fangen mit der verschachtelten Schleife 
 Füge außen um die erste ``||loops.Schleife||`` eine Weitere hinzu.
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     for (let Index = 0; Index <= 4; Index++) {
         for (let Index = 0; Index <= 4; Index++) {
             led.plot(Index, 0)
@@ -106,7 +106,7 @@ Klicke mit Rechtsklick auf die ``||variables.Index-Variable||``, um diese in **x
 ![index.gif](https://raw.githubusercontent.com/jasperp92/makecode-tutorials/master/assets/images/index.gif)
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     for (let yIndex = 0; yIndex <= 4; yIndex++) {
         for (let xIndex = 0; xIndex <= 4; xIndex++) {
             led.plot(xIndex, 0)
@@ -128,7 +128,7 @@ die ``||basic.RGB-LED ausschalten||``.
 **Fertig ist der Countdown!** Im nächsten Schritt wird die zweite Variante vorgestellt. 
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.turnRgbLedOff()
     basic.clearScreen()
     for (let yIndex = 0; yIndex <= 4; yIndex++) {
@@ -152,7 +152,7 @@ errechnen wir uns mathematisch. **Lösche die äußere Schleife** und zähle den
 
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.turnRgbLedOff()
     basic.clearScreen()
         for (let Index = 0; Index <= 24; Index++) {
@@ -173,7 +173,7 @@ Die Nachkommastellen werden von dem ``||led.Zeige||``-Block nicht berücksichtig
 Wir können für das bessere Verständnis trotzdem die X-Werte ``||math.abrunden||``.
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.turnRgbLedOff()
     basic.clearScreen()
     for (let Index = 0; Index <= 24; Index++) {
@@ -194,7 +194,7 @@ Der Rest der überbleibt, ergibt die X-Werte:
 Verwende dafür den Block ``||math.Rest von||`` aus Mathematik. 
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.turnRgbLedOff()
     basic.clearScreen()
     for (let Index = 0; Index <= 24; Index++) {
@@ -208,7 +208,7 @@ input.onButtonPressed(Button.A, function () {
 ```
 
 ```template
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
 	
 })
 

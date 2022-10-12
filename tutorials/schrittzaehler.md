@@ -134,7 +134,7 @@ Wir lassen uns die letzte Ziffer anzeigen, indem wir den Rest der **Schritte / 1
 
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.showNumber(Schritte)
 })
 let Schritte = 0

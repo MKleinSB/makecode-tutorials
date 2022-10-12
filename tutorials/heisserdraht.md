@@ -78,7 +78,7 @@ In dem nächsten Schritt möchten wir einen Zähler einbauen, jedesmal wenn wir 
 Wähle aus den ``||variable.Variablen||`` den Block ``||variable.ändere Berührung um 1||`` aus.
 
 ```blocks
-input.onPinPressed(TouchPin.P0, function () {
+input.onPinTouchEvent(TouchPin.P0, input.buttonEventDown(), function () {
     Berührungen += 1
     basic.setLedColor(0xff0000)
     basic.showString("C")
@@ -103,9 +103,9 @@ Dafür verwenden wir zwei weitere Pins, die den Stromkreis am Anfang und Ende sc
 Da es kein Verhalten für Ansonsten gibt, kannst du zwei Eventblöcke ``||input.wenn Pin P0 gedrückt||`` verwenden und setzt die Pins auf ``P0`` und ``P2``.
 
 ```blocks
-input.onPinPressed(TouchPin.P2, function () {
+input.onPinTouchEvent(TouchPin.P2, input.buttonEventDown(), function () {
 })
-input.onPinPressed(TouchPin.P1, function () {
+input.onPinTouchEvent(TouchPin.P1, input.buttonEventDown(), function () {
 })
 ```
 
@@ -120,11 +120,11 @@ P2 ist der Auslöser am Ende des Drahtes und setzt den Spielstart auf ``falsch``
 Versuche die Blöcke selbst zu finden und einzubauen.
 
 ```blocks
-input.onPinPressed(TouchPin.P2, function () {
+input.onPinTouchEvent(TouchPin.P2, input.buttonEventDown(), function () {
     Spielstart = false
     basic.turnRgbLedOff()
 })
-input.onPinPressed(TouchPin.P1, function () {
+input.onPinTouchEvent(TouchPin.P1, input.buttonEventDown(), function () {
     Spielstart = true
     Berührungen = 0
     basic.clearScreen()
@@ -138,11 +138,11 @@ Geschafft, die Programmierung ist fertig!
 Klicke auf ``|Herunterladen|``, um dein Programm auf deinen Calliope mini zu übertragen und Klavier zu spielen.
 
 ```blocks
-input.onPinPressed(TouchPin.P2, function () {
+input.onPinTouchEvent(TouchPin.P2, input.buttonEventDown(), function () {
     Spielstart = false
     basic.turnRgbLedOff()
 })
-input.onPinPressed(TouchPin.P1, function () {
+input.onPinTouchEvent(TouchPin.P1, input.buttonEventDown(), function () {
     Spielstart = true
     Berührungen = 0
     basic.clearScreen()

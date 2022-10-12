@@ -32,10 +32,10 @@ Füge ``||input.wenn Knopf A gedrückt||`` ist und ``||input.wenn Knopf B gedrü
 In beiden Fällen soll erstmal mit ``||basic.zeige Symbol||`` ein Haken angezeigt werden.
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.showIcon(IconNames.Yes)
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     basic.showIcon(IconNames.Yes)
 })
 basic.forever(function () {
@@ -165,14 +165,14 @@ fangen.
 
 ```blocks
 let Zufall = 0
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (Zufall == 0) {
         basic.showIcon(IconNames.Yes)
     } else {
         basic.showIcon(IconNames.No)
     }
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Zufall == 1) {
         basic.showIcon(IconNames.Yes)
     } else {
@@ -192,14 +192,14 @@ Wie das geht, siehst du in dem nächsten Schritt.
 
 ```blocks
 let Zufall = 0
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (Zufall == 0) {
         basic.showIcon(IconNames.Yes)
     } else {
         basic.showIcon(IconNames.No)
     }
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Zufall == 1) {
         basic.showIcon(IconNames.Yes)
     } else {
@@ -247,7 +247,7 @@ wenn der Knopf gedrückt wurde und der Maulwurf auf der richtigen Seite ist.
 ```blocks
 let Zufall = 0
 let Spielstand = 0
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (Zufall == 0) {
         Spielstand += 1
         basic.showIcon(IconNames.Yes)
@@ -255,7 +255,7 @@ input.onButtonPressed(Button.A, function () {
         basic.showIcon(IconNames.No)
     }
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Zufall == 1) {
         Spielstand += 1    
         basic.showIcon(IconNames.Yes)
@@ -288,7 +288,7 @@ Im nächsten Schritt wird es gezeigt.
 
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (Zufall == 0) {
         Spielstand += 1
         basic.showIcon(IconNames.Yes)
@@ -299,7 +299,7 @@ input.onButtonPressed(Button.A, function () {
 input.onGesture(Gesture.Shake, function () {
     basic.showNumber(Spielstand)
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Zufall == 1) {
         Spielstand += 1
         basic.showIcon(IconNames.Yes)
@@ -351,7 +351,7 @@ Wenn du auf das Hinweis-Lämpchen klickst, findest du die Lösung.
 
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (Zufall == 0) {
         Spielstand += 1
         basic.showIcon(IconNames.Yes)
@@ -362,7 +362,7 @@ input.onButtonPressed(Button.A, function () {
 input.onGesture(Gesture.Shake, function () {
     basic.showNumber(Spielstand)
 })
-input.onButtonPressed(Button.AB, function () {
+input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
     if (Zufall == 2) {
         Spielstand += 1
         basic.showIcon(IconNames.Yes)
@@ -370,7 +370,7 @@ input.onButtonPressed(Button.AB, function () {
         basic.showIcon(IconNames.No)
     }
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Zufall == 1) {
         Spielstand += 1
         basic.showIcon(IconNames.Yes)

@@ -15,7 +15,7 @@ Im Calliope mini ist eine Uhr eingebaut, aber keine Stoppuhr.
 Zum Beispiel bei einem Rennen.
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
 	
 })
 ```
@@ -33,7 +33,7 @@ Erstelle hierfür eine Variable ``||variables.Startzeit||`` und setze diese auf 
 
 ```blocks
 let Startzeit = 0
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     Startzeit = input.runningTime()
 })
 ```
@@ -48,10 +48,10 @@ Ziehe die Startzeit von der aktuellen Laufzeit ab, um die gestoppte Zeit zu erha
 ```blocks
 let Startzeit = 0
 let gestoppte_Zeit = 0
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     Startzeit = input.runningTime()
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     gestoppte_Zeit = input.runningTime() - Startzeit
 })
 ```
@@ -67,11 +67,11 @@ Um die gestoppte Zeit in Sekunden, statt in Millisekunden anzuzeigen, teile die 
 let Startzeit = 0
 let gestoppte_Zeit = 0
 basic.setLedColor(0x00ff00)
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.setLedColor(0xff0000)
     Startzeit = input.runningTime()
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     basic.setLedColor(0x00ff00)
     gestoppte_Zeit = input.runningTime() - Startzeit
     basic.showNumber(gestoppte_Zeit / 1000)
@@ -91,11 +91,11 @@ Die Stoppuhr mit zwei Tasten ist fertig! Klicke auf |Herunterladen|, um sie ausz
 let Startzeit = 0
 let gestoppte_Zeit = 0
 basic.setLedColor(0x00ff00)
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.setLedColor(0xff0000)
     Startzeit = input.runningTime()
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     basic.setLedColor(0x00ff00)
     gestoppte_Zeit = input.runningTime() - Startzeit
     basic.showNumber(gestoppte_Zeit / 1000)
@@ -114,11 +114,11 @@ Um die Stoppuhr nur mit der Taste A zu bedienen, muss sich der Calliope mini mer
    ob die Stoppuhr bereits gestartet wurde und setzte diese beim ``||basic.Start||`` auf **0**.
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.setLedColor(0xff0000)
     Startzeit = input.runningTime()
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     basic.setLedColor(0x00ff00)
     gestoppte_Zeit = input.runningTime() - Startzeit
     basic.showNumber(gestoppte_Zeit / 1000)
@@ -138,7 +138,7 @@ Im Bereich ``||logic.ansonsten||`` den Programmteil, der beim Ende des Stoppvorg
 *Tipp: Die Blöcke können mit **Strg+C** und **Strg+V** aus dem ``||variables.wenn Knopf B gedrückt||`` wird in den ``||logic.ansonsten||``-Teil kopiert werden.* 
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (gestartet == 0) {
         basic.setLedColor(0xff0000)
         Startzeit = input.runningTime()
@@ -164,7 +164,7 @@ Stelle diese Variable ``||variables.gestartet||`` auf **1** wenn die Stoppuhr
 nach Ende des Stoppvorgang, damit das Programm neu startet.
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (gestartet == 0) {
         basic.setLedColor(0xff0000)
         Startzeit = input.runningTime()
@@ -191,7 +191,7 @@ Super. Die Stoppuhr ist fertig. Zu guter Letzt kann der Code noch verkürzt werd
 indem die Variabel ``||Startzeit||`` auch prüft, ob die Uhr gerade läuft oder nicht.
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (Startzeit == 0) {
         basic.setLedColor(0xff0000)
         Startzeit = input.runningTime()
@@ -209,7 +209,7 @@ basic.setLedColor(0x00ff00)
 ```
 
 ```template
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
 	
 })
 
