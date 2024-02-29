@@ -1,6 +1,6 @@
 # Klavier
 
-## Introduction @unplugged
+## Einführung @unplugged
 
 Halte den Calliope mit einer Hand am (-)–Pin. Lass verschiedene Töne erklingen,
 indem du mit einem Finger der anderen Hand einen der anderen Pins berührst.
