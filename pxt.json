@@ -27,7 +27,8 @@
         "tutorials/alarmanlage.md",
         "tutorials/schrittzaehler.md",
         "tutorials/laermampel.md",
-        "tutorials/thermometer.md"
+        "tutorials/thermometer.md",
+        "tutorials/flappy_bird.md"
     ],
     "testFiles": [
         "test.ts"
