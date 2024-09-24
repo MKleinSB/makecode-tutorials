@@ -3,7 +3,7 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "funk": "*"
     },
     "files": [
         "main.blocks",
@@ -33,6 +33,10 @@
     "testFiles": [
         "test.ts"
     ],
+    "targetVersions": {
+        "target": "6.0.41",
+        "targetId": "calliopemini"
+    },
     "supportedTargets": [
         "calliopemini"
     ],
