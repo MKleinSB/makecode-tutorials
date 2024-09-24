@@ -1,13 +1,13 @@
 # Heißer Draht
 
-## Introduction @unplugged
+## Einführung @unplugged
 
-Beim Spiel „Der heiße Draht“ führen die Schüler_innen einen Spielstab entlang 
+Beim Spiel „Der heiße Draht" führen die Schüler_innen einen Spielstab entlang 
 einer Bahn aus Draht, ohne den Draht zu berühren. 
 Passiert es doch, wird dies durch ein Licht-oder Tonsignal gemeldet. 
 Dazu programmieren die Schüler_innen den Calliope mini.
 
-## Step 1
+## Schritt 1
 
 ### Wenn/dann-Verzweigung für Berührung
 
@@ -23,7 +23,7 @@ basic.forever(function () {
 })
 ```
 
-## Step 2
+## Schritt 2
 
 ### Rückmeldung bei Berührung
 
@@ -43,7 +43,7 @@ basic.forever(function () {
 })
 ```
 
-## Step 3
+## Schritt 3
 
 ### Variablen
 
@@ -54,7 +54,7 @@ Klicke auf ``||variables.Variablen||`` und erstelle zwei mit den Namen ``Berühr
 
 ![alt text](https://raw.githubusercontent.com/jasperp92/makecode-tutorials/master/assets/images/variablen.gif)
 
-## Step 4 
+## Schritt 4 
 
 ### Variablen
 
@@ -70,7 +70,7 @@ Berührungen = 0
 Spielstart = true
 ```
 
-## Step 5 
+## Schritt 5 
 
 ### Berührungen zählen
 
@@ -88,14 +88,14 @@ input.onPinTouchEvent(TouchPin.P0, input.buttonEventDown(), function () {
 })
 ```
 
-## Step 6
+## Schritt 6
 
 ### Abfrage Spielende
 
 Wenn das Spiel beendet ist, möchten wir die Berührungen angezeigt haben. Dafür brauchen wir eine weitere ``||logic.Wenn/dann-Verzweigung||``, die prüft, ob der Spielstart ``wahr`` oder ``falsch`` ist.
 Baue deinen bisherigen Code in den oberen Bereich ein, wenn das Spiel gestartet ist. Ansonsten wenn das Spiel beendet ist, ``||input.zeige die Zahl||`` der ``||variables.Berührungen||``.
 
-## Step 7
+## Schritt 7
 
 ### Bedingungen für das Spielende
 Wir haben noch kein Ereignis, dass Start und Ende des Spiels bestimmt. 
@@ -109,7 +109,7 @@ input.onPinTouchEvent(TouchPin.P1, input.buttonEventDown(), function () {
 })
 ```
 
-## Step 8
+## Schritt 8
 
 ### Spielstart und -Ende zuweisen
 
@@ -131,7 +131,7 @@ input.onPinTouchEvent(TouchPin.P1, input.buttonEventDown(), function () {
 })
 ```
 
-## Step 9
+## Schritt 9
 
 ### Fertig! 
 Geschafft, die Programmierung ist fertig! 
@@ -169,7 +169,7 @@ basic.forever(function () {
 
 ```
 
-## Step 10
+## Schritt 10
 
 ### Spielaufbau
 

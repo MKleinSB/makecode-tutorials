@@ -25,10 +25,11 @@ Wir werden den Vogel steuern, indem wir Knopf A drücken, um ihn nach oben zu be
 ```blocks
 let vogel: game.LedSprite = null
 
-input.onButtonPressed(Button.A, () => {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     vogel.change(LedSpriteProperty.Y, -1)
 })
-input.onButtonPressed(Button.B, () => {
+
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     vogel.change(LedSpriteProperty.Y, 1)
 })
 ```
@@ -82,11 +83,11 @@ for (let index = 0; index <= 4; index++) {
     }
 }
 
-input.onButtonPressed(Button.A, () => {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     vogel.change(LedSpriteProperty.Y, -1)
 })
 
-input.onButtonPressed(Button.B, () => {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     vogel.change(LedSpriteProperty.Y, 1)
 })
 ```
@@ -232,11 +233,11 @@ let index = 0
 let leeresHindernisY = 0
 let hindernisse: game.LedSprite[] = []
 
-input.onButtonPressed(Button.A, function ()  {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     vogel.change(LedSpriteProperty.Y, -1)
 })
 
-input.onButtonPressed(Button.B, function ()  {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     vogel.change(LedSpriteProperty.Y, 1)
 })
 
